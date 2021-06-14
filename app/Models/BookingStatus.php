@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class BookingStatus extends Model
 {
-    const CONFIRMED = 4;
+    const UPCOMING = 3;
 }

@@ -44,7 +44,7 @@ class BookingController extends Controller
             'booked_to' => new Carbon($request->booked_to),
             'deposit_paid' => $request->deposit ? $price * (double)Setting::where('name', 'Deposit Pricing')->first()->value / 100 : 0,
             'price' => $price,
-            'status_id' => BookingStatus::CONFIRMED,
+            'status_id' => BookingStatus::UPCOMING,
             'is_paid' => $request->deposit ? false : true,
             'breakfast_need' => $request->breakfast ?? false,
         ]);
